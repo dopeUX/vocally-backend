@@ -7,7 +7,7 @@ router.route('/create-user').post(async(req, res)=>{
         name:req.body.name,
         email:req.body.email,
      });
-     res.json({stats:'user created'})
+     res.json({stats:'user created', user})
    }catch(err){
      res.json({stats:'user cannot be created, '+err});
    }
